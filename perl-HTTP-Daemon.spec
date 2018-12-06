@@ -4,7 +4,7 @@
 #
 Name     : perl-HTTP-Daemon
 Version  : 6.01
-Release  : 24
+Release  : 25
 URL      : http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/HTTP-Daemon-6.01.tar.gz
 Source0  : http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/HTTP-Daemon-6.01.tar.gz
 Summary  : a simple http server class
