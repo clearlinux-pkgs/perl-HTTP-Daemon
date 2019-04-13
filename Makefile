@@ -1,5 +1,5 @@
 PKG_NAME := perl-HTTP-Daemon
-URL = http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/HTTP-Daemon-6.01.tar.gz
+URL = https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTTP-Daemon-6.04.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common

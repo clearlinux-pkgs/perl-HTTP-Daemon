@@ -1,18 +1,24 @@
-_______________________________________________________________________________
-2012-02-18 HTTP-Daemon 6.01
+Revision history for HTTP-Daemon
 
-If you bind localhost, don't trust gethostbyaddr() to resolve the
-address.  [RT#67247]
+6.04      2019-04-02 13:09:45Z
+  - Remove circular dependency on LWP::RobotUA introduced in 6.02 (GH#29)
+    (Olaf Alders)
 
-Restore perl-5.8.1 compatiblity.
+6.03      2019-04-01 20:56:38Z
+  - Remove circular dependency with LWP::UserAgent introduced in 6.02 (GH#27)
+    (Olaf Alders)
 
+6.02      2019-04-01 16:03:37Z
+  - Added a .mailmap to properly keep up with contributors to the dist.
+  - Revised the changelog to follow current format styles
+  - Change port number in test (GH#5) (Perlover)
 
+6.01    2012-02-18
+  - If you bind localhost, don't trust gethostbyaddr() to resolve the address.
+    RT#67247
+  - Restore perl-5.8.1 compatiblity.
 
-
-_______________________________________________________________________________
-2011-02-25 HTTP-Daemon 6.00
-
-Initial release of HTTP-Daemon as a separate distribution. There are no code
-changes besides incrementing the version number since libwww-perl-5.837.
-
-The HTTP::Daemon used to be bundled with the libwww-perl distribution.
+6.00    2011-02-25
+  - Initial release of HTTP-Daemon as a separate distribution. There are no code
+    changes besides incrementing the version number since libwww-perl-5.837.
+  - The HTTP::Daemon used to be bundled with the libwww-perl distribution.

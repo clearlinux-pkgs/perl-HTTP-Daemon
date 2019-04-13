@@ -1,4 +1,9 @@
-6.01
+6.04
+perl(ExtUtils::Config)
+perl(ExtUtils::Helpers)
+perl(ExtUtils::InstallPaths)
 perl(HTTP::Date)
 perl(LWP::MediaTypes)
+perl(Module::Build::Tiny)
+perl(Test::Needs)
 perl(URI)
