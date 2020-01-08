@@ -4,13 +4,14 @@
 #
 Name     : perl-HTTP-Daemon
 Version  : 6.06
-Release  : 35
+Release  : 36
 URL      : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTTP-Daemon-6.06.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTTP-Daemon-6.06.tar.gz
-Summary  : Simple http server class
+Summary  : 'A simple http server class'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
 Requires: perl-HTTP-Daemon-license = %{version}-%{release}
+Requires: perl-HTTP-Daemon-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(ExtUtils::Config)
 BuildRequires : perl(ExtUtils::Helpers)
@@ -32,7 +33,6 @@ Summary: dev components for the perl-HTTP-Daemon package.
 Group: Development
 Provides: perl-HTTP-Daemon-devel = %{version}-%{release}
 Requires: perl-HTTP-Daemon = %{version}-%{release}
-Requires: perl-HTTP-Daemon = %{version}-%{release}
 
 %description dev
 dev components for the perl-HTTP-Daemon package.
@@ -46,8 +46,18 @@ Group: Default
 license components for the perl-HTTP-Daemon package.
 
 
+%package perl
+Summary: perl components for the perl-HTTP-Daemon package.
+Group: Default
+Requires: perl-HTTP-Daemon = %{version}-%{release}
+
+%description perl
+perl components for the perl-HTTP-Daemon package.
+
+
 %prep
 %setup -q -n HTTP-Daemon-6.06
+cd %{_builddir}/HTTP-Daemon-6.06
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -72,7 +82,7 @@ make TEST_VERBOSE=1 test
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/perl-HTTP-Daemon
-cp LICENCE %{buildroot}/usr/share/package-licenses/perl-HTTP-Daemon/LICENCE
+cp %{_builddir}/HTTP-Daemon-6.06/LICENCE %{buildroot}/usr/share/package-licenses/perl-HTTP-Daemon/e9330dd55cc5b12a4e89bca611863182e2acf7d1
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -85,7 +95,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/HTTP/Daemon.pm
 
 %files dev
 %defattr(-,root,root,-)
@@ -93,4 +102,8 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/perl-HTTP-Daemon/LICENCE
+/usr/share/package-licenses/perl-HTTP-Daemon/e9330dd55cc5b12a4e89bca611863182e2acf7d1
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/HTTP/Daemon.pm
