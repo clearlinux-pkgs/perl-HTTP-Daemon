@@ -4,7 +4,7 @@
 #
 Name     : perl-HTTP-Daemon
 Version  : 6.12
-Release  : 43
+Release  : 44
 URL      : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTTP-Daemon-6.12.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTTP-Daemon-6.12.tar.gz
 Summary  : 'A simple http server class'
