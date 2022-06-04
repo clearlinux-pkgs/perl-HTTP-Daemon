@@ -4,7 +4,7 @@
 #
 Name     : perl-HTTP-Daemon
 Version  : 6.14
-Release  : 49
+Release  : 50
 URL      : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTTP-Daemon-6.14.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTTP-Daemon-6.14.tar.gz
 Summary  : 'A simple http server class'
@@ -106,4 +106,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/HTTP/Daemon.pm
+/usr/lib/perl5/*
